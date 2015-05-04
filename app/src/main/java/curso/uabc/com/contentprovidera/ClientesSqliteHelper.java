@@ -45,7 +45,7 @@ public class ClientesSqliteHelper extends SQLiteOpenHelper {
         //NOTA: Por simplicidad del ejemplo aqu� utilizamos directamente la opci�n de
         //      eliminar la tabla anterior y crearla de nuevo vac�a con el nuevo formato.
         //      Sin embargo lo normal ser� que haya que migrar datos de la tabla antigua
-        //      a la nueva, por lo que este m�todo deber�a ser m�s elaborado.
+        //      a la nueva, por lo que este metodo deber�a ser m�s elaborado.
  
         //Se elimina la versi�n anterior de la tabla
         db.execSQL("DROP TABLE IF EXISTS Clientes");

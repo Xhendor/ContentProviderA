@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">ContentProviderA</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Solo se creó y probó el ContentProvider</string>
     <string name="action_settings">Settings</string>
 
 </resources>

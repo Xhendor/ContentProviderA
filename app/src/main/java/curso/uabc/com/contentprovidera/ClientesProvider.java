@@ -13,7 +13,7 @@ public class ClientesProvider extends ContentProvider {
 	
 	//Definici�n del CONTENT_URI
 	private static final String uri = 
-		"content://curso.uabc.com.contentprovidera/clientes";
+		"content://curso.uabc.com.test/clientes";
 	
 	public static final Uri CONTENT_URI = Uri.parse(uri);
 	
@@ -42,8 +42,8 @@ public class ClientesProvider extends ContentProvider {
 	//Inicializamos el UriMatcher
 	static {
 		uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
-		uriMatcher.addURI("curso.uabc.com.contentprovidera", "clientes", CLIENTES);
-		uriMatcher.addURI("curso.uabc.com.contentprovidera", "clientes/#", CLIENTES_ID);
+		uriMatcher.addURI("curso.uabc.com.test", "clientes", CLIENTES);
+		uriMatcher.addURI("curso.uabc.com.test", "clientes/#", CLIENTES_ID);
 	}
 	
 	@Override
@@ -126,16 +126,16 @@ public class ClientesProvider extends ContentProvider {
 	
 	@Override
 	public String getType(Uri uri) {
-		
+
 		int match = uriMatcher.match(uri);
-		
-		switch (match) 
+
+		switch (match)
 		{
-			case CLIENTES: 
+			case CLIENTES:
 				return "vnd.android.cursor.dir/vnd.uabc.cliente";
-			case CLIENTES_ID: 
+			case CLIENTES_ID:
 				return "vnd.android.cursor.item/vnd.uabc.cliente";
-			default: 
+			default:
 				return null;
 		}
 	}
